@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Speed Hub · Speed UTV</title>
+<meta name="description" content="The pitch for Speed Hub: one platform for your customers, your sales and your back office, on your brand. Built, with a live demo inside." />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Speed Hub" />
+<meta property="og:title" content="Speed Hub · Speed UTV" />
+<meta property="og:description" content="One platform for your customers, your sales and your back office, on your brand. Built, with a live demo inside." />
+<meta property="og:image" content="https://soyalantapia.github.io/speed-hub-overview/og.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://soyalantapia.github.io/speed-hub-overview/" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Speed Hub · Speed UTV" />
+<meta name="twitter:image" content="https://soyalantapia.github.io/speed-hub-overview/og.jpg" />
+<!-- Saira Condensed = racing display (matches the product); Saira = body; JetBrains Mono = numbers/VIN -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:ital,wght@0,600;0,700;1,800;1,900&family=Saira:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+/* =========================================== THEME =========================================== */
+:root{
+  --black:#0a0a0a; --carbon:#161616; --carbon2:#1e1e1e; --line:#262626;
+  --orange:#ff7d00; --orange-dim:#cc6400; --white:#ffffff; --silver:#9a9a9a; --steel:#5c5c5c;
+  --ok:#22c55e; --danger:#ef4444; --warn:#f59e0b;
+  --font-display:"Saira Condensed",sans-serif; --font-body:"Saira",sans-serif; --font-mono:"JetBrains Mono",monospace;
+  --ease:cubic-bezier(0.16,1,0.3,1); --dur:0.7s;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+/* ---- viewport-base.css (full) ---- */
+html,body{height:100%;overflow-x:hidden}
+html{scroll-snap-type:y mandatory;scroll-behavior:smooth}
+.slide{width:100vw;height:100vh;height:100dvh;overflow:hidden;scroll-snap-align:start;display:flex;flex-direction:column;position:relative}
+.slide-content{flex:1;display:flex;flex-direction:column;justify-content:center;max-height:100%;overflow:hidden;padding:var(--slide-padding)}
+:root{--title-size:clamp(1.5rem,5vw,4rem);--h2-size:clamp(1.25rem,3.5vw,2.5rem);--h3-size:clamp(1rem,2.5vw,1.75rem);--body-size:clamp(0.75rem,1.5vw,1.125rem);--small-size:clamp(0.65rem,1vw,0.875rem);--slide-padding:clamp(1rem,4vw,4rem);--content-gap:clamp(0.5rem,2vw,2rem);--element-gap:clamp(0.25rem,1vw,1rem)}
+.card,.container,.content-box{max-width:min(90vw,1000px);max-height:min(80vh,700px)}
+.feature-list,.bullet-list{gap:clamp(0.4rem,1vh,1rem)}
+.feature-list li,.bullet-list li{font-size:var(--body-size);line-height:1.4}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:clamp(0.5rem,1.5vw,1rem)}
+img,.image-container{max-width:100%;max-height:min(50vh,400px);object-fit:contain}
+@media (max-height:700px){:root{--slide-padding:clamp(0.75rem,3vw,2rem);--content-gap:clamp(0.4rem,1.5vw,1rem);--title-size:clamp(1.25rem,4.5vw,2.5rem);--h2-size:clamp(1rem,3vw,1.75rem)}}
+@media (max-height:600px){:root{--slide-padding:clamp(0.5rem,2.5vw,1.5rem);--content-gap:clamp(0.3rem,1vw,0.75rem);--title-size:clamp(1.1rem,4vw,2rem);--body-size:clamp(0.7rem,1.2vw,0.95rem)}.nav-dots,.keyboard-hint,.decorative{display:none}}
+@media (max-height:500px){:root{--slide-padding:clamp(0.4rem,2vw,1rem);--title-size:clamp(1rem,3.5vw,1.5rem);--h2-size:clamp(0.9rem,2.5vw,1.25rem);--body-size:clamp(0.65rem,1vw,0.85rem)}}
+@media (max-width:600px){:root{--title-size:clamp(1.25rem,7vw,2.5rem)}.grid{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.2s!important}html{scroll-behavior:auto}}
+
+/* =========================================== BASE LOOK =========================================== */
+body{background:var(--black);color:var(--white);font-family:var(--font-body);-webkit-font-smoothing:antialiased}
+.slide{background:radial-gradient(120% 80% at 80% -10%,rgba(255,125,0,.10),transparent 55%),linear-gradient(180deg,#0c0c0c,#070707)}
+.slide::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background-image:repeating-linear-gradient(115deg,transparent 0 38px,rgba(255,255,255,.012) 38px 39px)}
+.display{font-family:var(--font-display);font-style:italic;font-weight:800;text-transform:uppercase;letter-spacing:-.01em;line-height:.96}
+.mono{font-family:var(--font-mono);font-variant-numeric:tabular-nums}
+.eyebrow{font-family:var(--font-display);font-style:italic;font-weight:700;text-transform:uppercase;letter-spacing:.18em;font-size:var(--small-size);color:var(--orange)}
+.lead{color:var(--silver);font-size:var(--body-size);line-height:1.5;max-width:60ch}
+.amp{color:var(--orange)}
+.kicker-line{width:clamp(40px,6vw,72px);height:4px;background:var(--orange);border-radius:2px}
+.tag{display:inline-flex;align-items:center;gap:.5em;font-size:var(--small-size);color:var(--steel)}
+.wrap{width:100%;max-width:min(94vw,1240px);margin:0 auto}
+::selection{background:var(--orange);color:#0a0a0a}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity var(--dur) var(--ease),transform var(--dur) var(--ease)}
+.slide.visible .reveal{opacity:1;transform:none}
+.slide.visible .reveal:nth-child(1){transition-delay:.05s}.slide.visible .reveal:nth-child(2){transition-delay:.13s}
+.slide.visible .reveal:nth-child(3){transition-delay:.21s}.slide.visible .reveal:nth-child(4){transition-delay:.29s}
+.slide.visible .reveal:nth-child(5){transition-delay:.37s}.slide.visible .reveal:nth-child(6){transition-delay:.45s}
+.d1{transition-delay:.1s!important}.d2{transition-delay:.2s!important}.d3{transition-delay:.3s!important}.d4{transition-delay:.4s!important}.d5{transition-delay:.5s!important}.d6{transition-delay:.6s!important}
+
+/* progress + dots */
+.progress-bar{position:fixed;top:0;left:0;height:3px;background:var(--orange);width:0;z-index:9999;box-shadow:0 0 12px rgba(255,125,0,.6)}
+.nav-dots{position:fixed;right:clamp(8px,1.6vw,20px);top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:10px;z-index:9000}
+.nav-dots button{width:9px;height:9px;border-radius:50%;border:1px solid var(--steel);background:transparent;cursor:pointer;padding:0;transition:all .3s}
+.nav-dots button.active{background:var(--orange);border-color:var(--orange);transform:scale(1.25);box-shadow:0 0 10px rgba(255,125,0,.6)}
+.slide-no{position:fixed;left:clamp(10px,1.6vw,22px);bottom:clamp(10px,1.6vw,20px);font-family:var(--font-mono);font-size:.72rem;color:var(--steel);z-index:9000;letter-spacing:.1em}
+.hint{position:fixed;right:clamp(10px,1.6vw,22px);bottom:clamp(10px,1.6vw,20px);font-size:.66rem;color:var(--steel);z-index:9000;letter-spacing:.12em;text-transform:uppercase}
+
+/* frames */
+.phone{position:relative;border:2px solid #2c2c2c;border-radius:30px;padding:9px 8px;background:#000;box-shadow:0 30px 70px -25px rgba(0,0,0,.9),0 0 0 1px rgba(255,255,255,.03);max-height:74vh}
+.phone::before{content:"";position:absolute;top:14px;left:50%;transform:translateX(-50%);width:34%;height:5px;border-radius:3px;background:#222;z-index:2}
+.phone img{display:block;border-radius:22px;max-height:70vh;width:auto}
+.browser{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--carbon);box-shadow:0 28px 64px -24px rgba(0,0,0,.85);max-width:100%}
+.browser-bar{display:flex;align-items:center;gap:6px;padding:8px 12px;background:#101010;border-bottom:1px solid var(--line)}
+.browser-bar i{width:10px;height:10px;border-radius:50%;display:inline-block}
+.browser-bar .u{margin-left:14px;font-family:var(--font-mono);font-size:.66rem;color:var(--steel);overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.browser img{display:block;width:100%;max-height:66vh;object-fit:cover;object-position:top}
+
+/* chips/pills */
+.chip{display:inline-flex;align-items:center;gap:.4em;border:1px solid var(--line);background:var(--carbon);border-radius:999px;padding:.3em .8em;font-size:var(--small-size);color:var(--silver)}
+.chip.orange{border-color:rgba(255,125,0,.35);background:rgba(255,125,0,.1);color:var(--orange)}
+.chip.ok{border-color:rgba(34,197,94,.35);background:rgba(34,197,94,.1);color:var(--ok)}
+
+/* layouts */
+.split{display:grid;grid-template-columns:1fr;gap:var(--content-gap);align-items:center;width:100%}
+@media (min-width:860px){.split{grid-template-columns:1.05fr 1fr}.split.media-left{grid-template-columns:1fr 1.05fr}}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(.5rem,1.2vw,1rem)}
+@media (min-width:860px){.cards.c3{grid-template-columns:repeat(3,1fr)}}
+.fcard{border:1px solid var(--line);background:linear-gradient(180deg,var(--carbon),#121212);border-radius:14px;padding:clamp(.7rem,1.4vw,1.15rem)}
+.fcard h4{font-family:var(--font-display);font-style:italic;font-weight:800;text-transform:uppercase;font-size:clamp(.95rem,1.5vw,1.2rem);letter-spacing:-.01em}
+.fcard p{color:var(--silver);font-size:var(--small-size);line-height:1.45;margin-top:.25em}
+.fcard .ic{color:var(--orange);font-size:1.3em;line-height:1}
+.stat{font-family:var(--font-display);font-style:italic;font-weight:900;color:var(--orange);line-height:.9}
+ul.checks{list-style:none;display:grid;gap:.5em}
+ul.checks li{display:flex;gap:.6em;align-items:baseline;font-size:var(--body-size);color:#e9e9e9}
+ul.checks li::before{content:"";flex:0 0 auto;width:.62em;height:.62em;margin-top:.45em;background:var(--orange);transform:rotate(45deg)}
+.bigprice{font-family:var(--font-display);font-style:italic;font-weight:900;color:var(--white);line-height:.85;letter-spacing:-.02em}
+.btn{display:inline-flex;align-items:center;gap:.5em;background:var(--orange);color:#0a0a0a;font-weight:700;text-decoration:none;border-radius:10px;padding:.6em 1.1em;font-size:var(--body-size)}
+.btn.ghost{background:transparent;color:var(--white);border:1px solid var(--line)}
+a{color:var(--orange)}
+
+/* title slide */
+.title-bg{position:absolute;inset:0;background:url('img/hero-bg.jpg') center/cover;opacity:.22}
+.title-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,7,7,.5),rgba(7,7,7,.2) 45%,#070707)}
+
+/* edit mode */
+.edit-hotzone{position:fixed;top:0;left:0;width:70px;height:70px;z-index:10000;cursor:pointer}
+.edit-toggle{position:fixed;top:14px;left:14px;z-index:10001;opacity:0;pointer-events:none;transition:opacity .3s;background:var(--carbon);border:1px solid var(--line);color:var(--orange);border-radius:8px;width:38px;height:38px;font-size:16px;cursor:pointer}
+.edit-toggle.show,.edit-toggle.active{opacity:1;pointer-events:auto}
+.edit-banner{position:fixed;top:14px;left:60px;z-index:10001;background:var(--orange);color:#0a0a0a;font-weight:700;font-size:.7rem;padding:.4em .8em;border-radius:8px;opacity:0;pointer-events:none;transition:opacity .3s}
+.edit-banner.active{opacity:1}
+body.edit-active [contenteditable]{outline:1px dashed rgba(255,125,0,.5);outline-offset:3px;border-radius:3px}
+</style>
+</head>
+<body>
+<div class="progress-bar"></div>
+<nav class="nav-dots"></nav>
+<div class="slide-no"></div>
+<div class="hint">← → to navigate</div>
+<div class="edit-hotzone"></div>
+<button class="edit-toggle" id="editToggle" title="Edit mode (E)">✏</button>
+<div class="edit-banner" id="editBanner">EDIT MODE · click text · ⌘S to save</div>
+
+<!-- ============ 1 · PORTADA ============ -->
+<section class="slide" data-label="Portada">
+  <div class="title-bg decorative"></div>
+  <div class="slide-content" style="align-items:center;text-align:center;position:relative">
+    <img class="reveal" src="img/logo.png" alt="Speed UTV" style="height:clamp(34px,5vw,58px);margin-bottom:clamp(1rem,3vh,2.2rem)" />
+    <h1 class="display reveal" style="font-size:clamp(2.6rem,11vw,8rem);color:#fff">Speed <span class="amp">Hub</span></h1>
+    <p class="reveal lead" style="text-align:center;max-width:42ch;margin-top:.6em;font-size:clamp(.9rem,2vw,1.35rem);color:#cfcfcf">Una plataforma para tus clientes, tus ventas y tu trastienda. <span class="amp">Con tu marca.</span></p>
+    <div class="reveal" style="margin-top:clamp(1.2rem,3vh,2.4rem);display:flex;gap:.6em;flex-wrap:wrap;justify-content:center">
+      <span class="chip orange">Owner App</span><span class="chip orange">Speed Admin</span><span class="chip ok">● Demo en vivo</span>
+    </div>
+    <p class="reveal tag" style="margin-top:clamp(1rem,3vh,2rem)">Xnod × Speed UTV · La plataforma en 5 minutos</p>
+  </div>
+</section>
+
+<!-- ============ 2 · EL PROBLEMA ============ -->
+<section class="slide" data-label="El problema">
+  <div class="slide-content"><div class="wrap">
+    <div class="eyebrow reveal">El problema</div>
+    <h2 class="display reveal" style="font-size:var(--h2-size);margin-top:.2em">No podés ver<br>tu propio <span class="amp">negocio.</span></h2>
+    <p class="lead reveal" style="margin-top:.6em;max-width:52ch">Todo vive a mano, en lugares que no se hablan. Volás a ciegas justo en lo que hace o cuesta plata.</p>
+    <div class="cards c3 reveal" style="margin-top:clamp(.8rem,2vh,1.4rem)">
+      <div class="fcard"><div class="ic">🛡️</div><h4>Sin control de cobertura</h4><p>Seguros y papeles sin una sola fuente. Cobertura cobrada y nunca registrada.</p></div>
+      <div class="fcard"><div class="ic">🧾</div><h4>Sin trackeo de compras</h4><p>No sabés qué compró cada dueño, ni qué le toca comprar.</p></div>
+      <div class="fcard"><div class="ic">📣</div><h4>Sin forma de llegarle</h4><p>Sin canal directo al dueño, la próxima venta se va caminando.</p></div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ============ 3 · LA SOLUCIÓN ============ -->
+<section class="slide" data-label="Speed Hub">
+  <div class="slide-content"><div class="wrap">
+    <div class="eyebrow reveal">La plataforma</div>
+    <h2 class="display reveal" style="font-size:var(--h2-size);margin-top:.2em">Dos apps,<br>una <span class="amp">marca.</span></h2>
+    <p class="lead reveal" style="margin-top:.6em;max-width:52ch">Speed Hub reemplaza a NetSuite en lo que importa y abre un canal directo con el comprador.</p>
+    <div class="cards reveal" style="margin-top:clamp(.8rem,2vh,1.4rem)">
+      <div class="fcard"><div class="ic">📱</div><h4>Owner App</h4><p>La app que se lleva el comprador: su fierro, cobertura, reclamos, repuestos y service. Todo con la marca Speed UTV.</p></div>
+      <div class="fcard"><div class="ic">🖥️</div><h4>Speed Admin</h4><p>Tu trastienda: cliente 360, garantías, pagos, ventas y posventa, en un solo lugar.</p></div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ============ 4 · OWNER APP ============ -->
+<section class="slide" data-label="Owner App">
+  <div class="slide-content"><div class="wrap split">
+    <div>
+      <div class="eyebrow reveal">Owner App</div>
+      <h2 class="display reveal" style="font-size:var(--h2-size);margin-top:.25em">La app que se<br>lleva el <span class="amp">comprador.</span></h2>
+      <p class="lead reveal" style="margin-top:.7em">Un fierro de USD 50k merece más que un PDF. Todo lo que necesita, desde el celular.</p>
+      <ul class="checks reveal" style="margin-top:1em">
+        <li><strong>Cobertura que renueva en un toque.</strong> Antes de que venza, rápido y seguro.</li>
+        <li><strong>Reclamos de garantía desde el celular.</strong> Foto, una línea, abierto y seguido, conectado a la aseguradora.</li>
+        <li><strong>Comprá repuestos y cobertura en la app.</strong> Checkout, cuotas y seguimiento de la orden.</li>
+        <li><strong>Mantenimiento predictivo.</strong> Según las horas: el kit que necesita y recompra en un toque.</li>
+      </ul>
+    </div>
+    <div class="reveal" style="display:flex;justify-content:center"><div class="phone"><img src="img/owner-garage.png" alt="Inicio de la Owner App"/></div></div>
+  </div></div>
+</section>
+
+<!-- ============ 5 · SPEED ADMIN ============ -->
+<section class="slide" data-label="Speed Admin">
+  <div class="slide-content"><div class="wrap split media-left">
+    <div class="reveal"><div class="browser"><div class="browser-bar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="u">speed-demo-web · /admin</span></div><img src="img/admin-dashboard.png" alt="Dashboard de Speed Admin"/></div></div>
+    <div>
+      <div class="eyebrow reveal">Speed Admin</div>
+      <h2 class="display reveal" style="font-size:var(--h2-size);margin-top:.25em">Tu trastienda,<br>sin <span class="amp">NetSuite.</span></h2>
+      <p class="lead reveal" style="margin-top:.7em">Toda la concesionaria en una pantalla, que abre en el único número que importa: la plata que el sistema te acaba de ahorrar.</p>
+      <ul class="checks reveal" style="margin-top:1em">
+        <li><strong>Cliente 360.</strong> Cada vehículo, garantía, service y factura por persona.</li>
+        <li><strong>Garantías que se mandan solas a la aseguradora.</strong> Se terminó la cobertura cobrada y nunca registrada.</li>
+        <li><strong>Bloquea el doble pago.</strong> El mismo VIN o la misma factura no se pagan dos veces.</li>
+        <li><strong>Ventas, pipeline y comisiones.</strong> Cada negocio del hola al cierre.</li>
+      </ul>
+    </div>
+  </div></div>
+</section>
+
+<!-- ============ 6 · AUTOMATIZACIÓN ============ -->
+<section class="slide" data-label="Automatización">
+  <div class="slide-content"><div class="wrap split">
+    <div>
+      <div class="eyebrow reveal">Automatización comercial</div>
+      <h2 class="display reveal" style="font-size:var(--h2-size);margin-top:.25em">La venta es el arranque,<br>no la <span class="amp">meta.</span></h2>
+      <p class="lead reveal" style="margin-top:.7em">Registrás una venta y el sistema hace el resto, solo.</p>
+      <ul class="checks reveal" style="margin-top:1em">
+        <li><strong>Se manda solo a la aseguradora.</strong> La cobertura va a la aseguradora en el momento que vendés.</li>
+        <li><strong>Hace la cuenta.</strong> Lo que se debe, lo que cubre, la comisión del vendedor.</li>
+        <li><strong>Avisa al dueño.</strong> Cada paso le llega a su app en tiempo real.</li>
+      </ul>
+    </div>
+    <div class="reveal"><div class="browser"><div class="browser-bar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="u">/admin/warranties</span></div><img src="img/admin-warranties.png" alt="Garantías enviándose a la aseguradora"/></div></div>
+  </div></div>
+</section>
+
+<!-- ============ 7 · LA PLATA ============ -->
+<section class="slide" data-label="La plata">
+  <div class="slide-content"><div class="wrap">
+    <div class="eyebrow reveal">Lo que vale</div>
+    <h2 class="display reveal" style="font-size:var(--h2-size);margin-top:.2em">Frená la hemorragia.<br>Arrancá el <span class="amp">ingreso.</span></h2>
+    <div class="cards c3 reveal" style="margin-top:clamp(.8rem,2vh,1.4rem)">
+      <div class="fcard"><div class="ic">🩸</div><h4>La hemorragia frena</h4><p>Pagos dobles, garantías facturadas de más y cobertura cobrada y nunca registrada. Plata que se iba por nada.</p></div>
+      <div class="fcard"><div class="ic">🔁</div><h4>Ingreso recurrente</h4><p>Cobertura que se renueva, repuestos y upgrades comprados en la app. La próxima venta cierra adentro.</p></div>
+      <div class="fcard"><div class="ic">🔒</div><h4>Dueños que se quedan</h4><p>Cuando cada dueño vive en tu app, no se va a otra marca.</p></div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ============ 8 · EL MODELO ============ -->
+<section class="slide" data-label="El modelo">
+  <div class="slide-content" style="align-items:center;text-align:center"><div class="wrap">
+    <div class="eyebrow reveal">Cómo funciona</div>
+    <h2 class="display reveal" style="font-size:var(--h3-size);margin-top:.2em;color:#cfcfcf;font-weight:700">Una tarifa plana. Eso es toda la cuenta.</h2>
+    <div class="reveal" style="margin-top:.3em"><span class="bigprice" style="font-size:clamp(3.4rem,15vw,9rem)">$1,750</span><span class="display" style="font-size:clamp(1rem,3vw,2rem);color:var(--silver)"> / mes</span></div>
+    <p class="reveal" style="margin-top:.5em;font-size:var(--body-size);color:var(--silver)">¿Preferís anual? <span class="amp">Dos meses bonificados</span> · <span class="mono" style="color:#fff">$17.500</span><span style="color:var(--steel)">/año</span></p>
+    <div class="reveal" style="display:grid;grid-template-columns:1fr;gap:clamp(.5rem,1.5vw,1rem);max-width:900px;margin:clamp(.8rem,2.5vh,1.4rem) auto 0">
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(.5rem,1.2vw,.9rem);text-align:left">
+        <div class="fcard"><h4 style="color:var(--orange)">Todo incluido</h4><ul class="checks" style="margin-top:.4em;font-size:var(--small-size)"><li>La plataforma, la construimos nosotros</li><li>Soporte ilimitado</li><li>Nuevas features e implementaciones ilimitadas</li><li>Trabajamos como tu equipo de producto</li><li>Hosting, actualizaciones y capacitación</li></ul></div>
+        <div class="fcard"><h4 style="color:var(--orange)">Sin letra chica</h4><ul class="checks" style="margin-top:.4em;font-size:var(--small-size)"><li>Sin fee de setup ni onboarding</li><li>Mes a mes, cancelás cuando quieras</li><li>Sin cargos por usuario, sin sorpresas</li><li>Tus datos y tu marca, siempre tuyos</li><li>Una sola factura. Con eso, pagás todo.</li></ul></div>
+      </div>
+    </div>
+    <p class="reveal tag" style="margin-top:1em">No es software que licenciás. Es un equipo de producto que construye y opera toda tu plataforma, con tu marca y con soporte siempre activo.</p>
+  </div></div>
+</section>
+
+<!-- ============ 9 · PROBALA EN VIVO ============ -->
+<section class="slide" data-label="En vivo">
+  <div class="title-bg decorative" style="background-image:url('img/action2.jpg')"></div>
+  <div class="slide-content" style="align-items:center;text-align:center;position:relative"><div class="wrap">
+    <img class="reveal" src="img/logo.png" alt="Speed UTV" style="height:clamp(26px,3.4vw,42px);margin-bottom:.8em"/>
+    <h2 class="display reveal" style="font-size:var(--title-size)">Probala <span class="amp">en vivo.</span></h2>
+    <p class="lead reveal" style="text-align:center;max-width:46ch;margin:.6em auto 0">Está construido. Está en vivo. Es tu marca. Abrí la demo en tu teléfono y probala de verdad.</p>
+    <div class="reveal" style="margin-top:clamp(1rem,3vh,1.5rem)">
+      <a class="btn" href="https://soyalantapia.github.io/speed-demo-web/" target="_blank" rel="noopener">Abrí la demo en vivo →</a>
+    </div>
+    <div class="reveal" style="margin-top:clamp(1.1rem,3vh,1.7rem);border-top:1px solid var(--line);padding-top:clamp(.9rem,2.5vh,1.4rem);max-width:580px;margin-left:auto;margin-right:auto">
+      <p class="tag" style="justify-content:center">¿Querés el recorrido en detalle?</p>
+      <div style="margin-top:.6em;display:flex;gap:.6em;flex-wrap:wrap;justify-content:center">
+        <a class="btn ghost" href="https://soyalantapia.github.io/speed-hub-pitch/es.html" target="_blank" rel="noopener">Presentación completa · Español</a>
+        <a class="btn ghost" href="https://soyalantapia.github.io/speed-hub-pitch/" target="_blank" rel="noopener">Full deck · English</a>
+      </div>
+    </div>
+    <p class="reveal tag" style="margin-top:clamp(1rem,3vh,1.5rem)">Xnod × Speed UTV · soyalantapia.github.io/speed-demo-web</p>
+  </div></div>
+</section>
+
+<script>
+/* =========================================== CONTROLLER =========================================== */
+class Deck{
+  constructor(){
+    this.slides=[...document.querySelectorAll('.slide')];
+    this.dotsEl=document.querySelector('.nav-dots');
+    this.bar=document.querySelector('.progress-bar');
+    this.noEl=document.querySelector('.slide-no');
+    this.current=0;
+    this.observer();this.dots();this.keys();this.touch();this.update();
+    window.addEventListener('scroll',()=>this.onScroll(),{passive:true});
+  }
+  observer(){
+    const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');this.current=this.slides.indexOf(e.target);this.update();}})},{threshold:.55});
+    this.slides.forEach(s=>io.observe(s));
+  }
+  dots(){
+    this.dotsEl.innerHTML='';
+    this.slides.forEach((s,i)=>{const b=document.createElement('button');b.setAttribute('aria-label',s.dataset.label||('Slide '+(i+1)));b.title=s.dataset.label||'';b.onclick=()=>this.go(i);this.dotsEl.appendChild(b);});
+  }
+  go(i){i=Math.max(0,Math.min(this.slides.length-1,i));this.slides[i].scrollIntoView({behavior:'smooth'});}
+  update(){
+    [...this.dotsEl.children].forEach((d,i)=>d.classList.toggle('active',i===this.current));
+    this.bar.style.width=((this.current)/(this.slides.length-1)*100)+'%';
+    this.noEl.textContent=String(this.current+1).padStart(2,'0')+' / '+String(this.slides.length).padStart(2,'0');
+  }
+  onScroll(){const idx=Math.round(window.scrollY/window.innerHeight);if(idx!==this.current){this.current=idx;this.update();}}
+  keys(){window.addEventListener('keydown',e=>{
+    if(e.target.getAttribute&&e.target.getAttribute('contenteditable'))return;
+    if(['ArrowDown','ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();this.go(this.current+1);}
+    else if(['ArrowUp','ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();this.go(this.current-1);}
+    else if(e.key==='Home'){this.go(0);}else if(e.key==='End'){this.go(this.slides.length-1);}
+  });}
+  touch(){let y=null;window.addEventListener('touchstart',e=>y=e.touches[0].clientY,{passive:true});
+    window.addEventListener('touchend',e=>{if(y===null)return;const dy=y-e.changedTouches[0].clientY;if(Math.abs(dy)>55)this.go(this.current+(dy>0?1:-1));y=null;},{passive:true});}
+}
+const deck=new Deck();
+
+/* =========================================== INLINE EDIT (E / ⌘S) =========================================== */
+const editor={isActive:false,
+  toggle(){this.isActive=!this.isActive;document.body.classList.toggle('edit-active',this.isActive);
+    document.getElementById('editToggle').classList.toggle('active',this.isActive);
+    document.getElementById('editBanner').classList.toggle('active',this.isActive);
+    document.querySelectorAll('h1,h2,h3,h4,p,li,span,a,.stat,.bigprice,.eyebrow').forEach(el=>{
+      if(el.closest('.nav-dots,.progress-bar,.edit-toggle,.edit-banner'))return;
+      if(this.isActive)el.setAttribute('contenteditable','true');else el.removeAttribute('contenteditable');});
+  },
+  export(){
+    const eds=[...document.querySelectorAll('[contenteditable]')];eds.forEach(el=>el.removeAttribute('contenteditable'));
+    document.body.classList.remove('edit-active');
+    const t=document.getElementById('editToggle'),b=document.getElementById('editBanner');
+    t.classList.remove('active','show');b.classList.remove('active');
+    const html='<!DOCTYPE html>\n'+document.documentElement.outerHTML;
+    document.body.classList.add('edit-active');eds.forEach(el=>el.setAttribute('contenteditable','true'));t.classList.add('active');b.classList.add('active');
+    const blob=new Blob([html],{type:'text/html'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='speed-hub-overview-es.html';a.click();URL.revokeObjectURL(a.href);
+  }};
+const hot=document.querySelector('.edit-hotzone'),tog=document.getElementById('editToggle');let ht=null;
+hot.addEventListener('mouseenter',()=>{clearTimeout(ht);tog.classList.add('show');});
+hot.addEventListener('mouseleave',()=>{ht=setTimeout(()=>{if(!editor.isActive)tog.classList.remove('show');},400);});
+tog.addEventListener('mouseenter',()=>clearTimeout(ht));
+tog.addEventListener('mouseleave',()=>{ht=setTimeout(()=>{if(!editor.isActive)tog.classList.remove('show');},400);});
+tog.addEventListener('click',()=>editor.toggle());
+hot.addEventListener('click',()=>editor.toggle());
+window.addEventListener('keydown',e=>{
+  if((e.key==='e'||e.key==='E')&&!e.target.getAttribute('contenteditable')){editor.toggle();}
+  if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==='s'){e.preventDefault();editor.export();}
+});
+</script>
+</body>
+</html>
